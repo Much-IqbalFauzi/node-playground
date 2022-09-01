@@ -9,7 +9,7 @@ const listSchema = new mongoose.Schema({
     },
     description: String,
     createdBy: {
-        type: mongoose.SchemaType.ObjectId,
+        type: mongoose.SchemaTypes.ObjectId,
         ref: 'user',
         required: true
     }

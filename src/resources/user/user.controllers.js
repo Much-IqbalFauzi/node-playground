@@ -4,7 +4,7 @@ export const person = (req, res) => {
     res.status(200).json({data: req.user})
 }
  
-export const updatePerson = (req, res) => {
+export const updatePerson = async (req, res) => {
     try {
         const user = await User.findByIdAndUpdate(req.user._id, req.body, {
             new: true

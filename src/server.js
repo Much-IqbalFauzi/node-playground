@@ -22,11 +22,11 @@ app.post('/signup', signup)
 app.post('/signin', signin)
 
 app.use('/api', protect)
-app.use('/api/user'. userRouter)
+app.use('/api/user', userRouter)
 app.use('/api/item', itemRouter)
-app.use('/api/list'. listRouter)
+app.use('/api/list', listRouter)
 
-export const start = () => {
+export const start = async () => {
     try {
         await connect()
         app.listen(config.port, () => {
